@@ -12,7 +12,7 @@ I didn't want to just make the easiest Dockerfile and call it a day. Oh no no no
 sudo docker run --rm -it alpine-echo "text here"
 ```
 --rm to remove the container after its finished! We would want to waste resources.
--it to make the image interactive! so that we can pass the arguments to the echo bin, we don't need to call echo becuase of the ENTRYPOINT line in the Dockerfile. Basically makes the image a glorifed executable.
+-it to make the image interactive! so that we can pass the arguments to the echo bin, we don't need to call echo becuase of the ENTRYPOINT line in the Dockerfile. Basically makes the image a glorified executable.
 
 ### Lets Make It Good!
 Follow these steps to make sure that people use this!
