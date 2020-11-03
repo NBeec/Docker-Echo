@@ -1,18 +1,21 @@
 # Docker-Echo
 The most useless docker container I could think of...
 
-its echo. like the binary "echo". Yes that one the, one where you go "echo hello" and it goes hello back. like seriously nothing special...
+It's echo. like the binary "echo". Yes that one, the one where you go "echo hello" and it goes hello back. like seriously nothing special...
 
 ### Back Story!
-I was looking for a project and someone mentioned that I should containerize a security tool that I might use. Well having a look at what I could do I noticed that everything had a docker image. Damn! no originality for me... I also noticed that there was a lot and i mean A LOT of things that really didn't need to be containerized. So that got me think... DOOM! I present you the most useless binary I could think for containerizing. Like there is no reason to containerize "echo" that I could think of.
+I was looking for a project and someone mentioned that I should containerize a security tool that I use. Well having a look at what I could do I noticed that everything had a docker image. Damn! no originality for me... I also noticed that there was a lot and i mean A LOT of things that really didn't need to be containerized. So that got me think... DOOM! I present you the most useless binary I could think for containerizing. Like there is no reason to containerize "echo" that I could think of. Apart from because I can!
 
 ### But Wait There's More...
-I didn't want to just make the easiest Dockerfile and call it a day. Oh no no no. Lets make this good. so you've build the docker image. and you can run it like normal.
+I didn't want to just make the easiest Dockerfile and call it a day. Oh no no no. Lets make this good. so you've built the docker image. and you can run it like normal.
 ```bash
 sudo docker run --rm -it alpine-echo "text here"
 ```
+--rm to remove the container after its finished! We would want to waste resources.
+-it to make the image interactive! so that we can pass the arguments to the echo bin, we don't need to call echo becuase of the ENTRYPOINT line in the Dockerfile. Basically makes the image a glorifed executable.
 
-Lets make sure that people use this!
+### Lets Make It Good!
+Follow these steps to make sure that people use this!
 1. Disable the local machine echo!
 ```bash
 mv $(which echo) $(which echo).bak
